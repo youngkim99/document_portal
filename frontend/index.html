@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Upload Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Document Upload Portal</h1>
+
+    <!-- Upload Form -->
+    <h2>Upload a PDF</h2>
+    <form id="upload-form">
+        <input type="file" id="file-upload" accept=".pdf" required />
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- List of Uploaded PDFs -->
+    <div class="uploaded-files">
+        <h3>Uploaded PDFs</h3>
+        <ul id="file-list">
+            <!-- Uploaded PDFs will appear here -->
+        </ul>
+    </div>
+
+    <div id="pdf-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
