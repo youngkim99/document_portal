@@ -17,7 +17,7 @@ import json
 # model = AutoModelForCausalLM.from_pretrained(model_name)
 
 # Configure OpenAI API key
-openai.api_key = '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'
+# openaikey 
 
 # Function to extract text from a PDF
 def extract_text_from_pdf(pdf_path):
@@ -97,7 +97,8 @@ def extract_fields_with_anthropic(pdf_text):
         """
 
         # Create a client
-        client = anthropic.Client(api_key="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")
+        #api_key
+        #client = anthropic.Client(api_key=)
         
         # Use Claude (e.g., 'claude-v1') or whichever model is available to you
         response = client.completions.create(
