@@ -5,6 +5,8 @@
   `python -m pip install -r requirements.txt`.
   4) From the top level directory (document_portal/), run `python manage.py migrate` to migrate database schemas
   5) Start the Django dev server `python manage.py runserver`
+  6) Open the webpage at http://127.0.0.1:5500/document_portal/frontend/index.html, or replace 5500 with the appropriate port
+  7) You can observe file submissions and processes in http://127.0.0.1:8000/api/documents, or replace 8000 with the appropriate port
   
 - Design - how is your project structured and what are some key design decisions that you made?
     My project is a Django project that encapsulates a frontend folder for the HTML/CSS/JS files, a main project directory "document_portal/document_portal", and an app directory "document_portal/documents". Most of the logic for the backend, including scripts for data extraction, database models, APIViews, and url configurations lies in the "documnet_portal/documents" app folder. The front end consists of a simple HTML home page that prompts a form submission for a pdf. script.js contains an event handler for the submission form and makes POST requests to the backend for extracting data. It also makes GET requests for viewing a document and its extracted data in an iframe when a user clicks on a completed process in the process list. A successfully processed document will show up in the process list below the submission form (but currently a bug prevents successful processing). File uploads are stored in document_portal/media/uploads to be later shown in the iframe.
