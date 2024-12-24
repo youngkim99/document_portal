@@ -16,7 +16,7 @@ import json
 # tokenizer = AutoTokenizer.from_pretrained(model_name)
 # model = AutoModelForCausalLM.from_pretrained(model_name)
 
-# Configure OpenAI API key
+# Configure OpenAI API key here
 # 
 
 # Function to extract text from a PDF
